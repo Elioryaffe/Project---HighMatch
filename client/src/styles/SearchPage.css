@@ -1,0 +1,238 @@
+/* גובה מינימלי של כל המסך ורווח מלמטה */
+.search-page { 
+    min-height: 100vh; 
+    padding-bottom: 30px; 
+}
+
+/* מסדר את הכותרת העליונה בשורה */
+.search-page header {
+    display: flex;
+
+    /* מרחיק את האלמנטים לקצוות */
+    justify-content: space-between;
+
+    /* ממרכז אותם לגובה */
+    align-items: center;
+
+    /* רווח פנימי */
+    padding: 15px 5%;
+
+    /* רקע לבן */
+    background: white;
+
+    /* קו תחתון אפור */
+    border-bottom: 1px solid #ddd;
+}
+
+/* צבע ורוד לכותרת */
+.search-page header h2 { 
+    color: #b94762; 
+}
+
+/* עיצוב אזור הסינונים */
+.filters {
+    /* מגביל רוחב */
+    max-width: 1100px;
+
+    /* ממרכז ונותן רווח מלמעלה ולמטה */
+    margin: 20px auto;
+
+    /* רווח פנימי */
+    padding: 16px;
+
+    /* מסדר את הסינונים בשורה */
+    display: flex;
+
+    /* מאפשר מעבר לשורה חדשה אם אין מקום */
+    flex-wrap: wrap;
+
+    /* רווח בין הסינונים */
+    gap: 10px;
+
+    /* רקע לבן */
+    background: white;
+
+    /* מסגרת אפורה */
+    border: 1px solid #ddd;
+}
+
+/* עיצוב סינון עם כמה אפשרויות */
+.multi-filter { 
+    /* מאפשר מיקום של הרשימה ביחס אליו */
+    position: relative;
+
+    /* רוחב מינימלי */
+    min-width: 150px; 
+}
+
+/* עיצוב הכותרת של הסינון */
+.multi-filter summary { 
+    padding: 10px 28px 10px 10px;
+
+    /* מסגרת */
+    border: 1px solid #ccc;
+
+    /* פינות מעוגלות */
+    border-radius: 6px;
+
+    /* מציג סמן לחיץ */
+    cursor: pointer;
+
+    /* רקע לבן */
+    background: white;
+
+    /* מסיר סימון ברירת מחדל */
+    list-style: none;
+}
+
+/* מוסיף חץ קטן לסינון */
+.multi-filter summary::after { 
+    content: "⌄";
+
+    /* מיקום מוחלט בתוך הסינון */
+    position: absolute;
+
+    /* מרחק מהצד השמאלי */
+    left: 10px;
+}
+
+/* עיצוב רשימת ה-checkbox */
+.checkbox-list { 
+    /* מציב את הרשימה מתחת לסינון */
+    position: absolute;
+
+    /* מציג אותה מעל אלמנטים אחרים */
+    z-index: 5;
+
+    /* תופס את כל רוחב הסינון */
+    width: 100%;
+
+    /* מגביל גובה */
+    max-height: 220px;
+
+    /* מאפשר גלילה אנכית */
+    overflow-y: auto;
+
+    /* רווח פנימי */
+    padding: 8px;
+
+    /* רקע לבן */
+    background: white;
+
+    /* מסגרת */
+    border: 1px solid #ccc;
+
+    /* כולל padding בתוך הרוחב */
+    box-sizing: border-box;
+}
+
+/* עיצוב כל אפשרות ברשימה */
+.checkbox-list label { 
+    display: block;
+
+    /* רווח פנימי */
+    padding: 4px;
+
+    /* מציג סמן לחיץ */
+    cursor: pointer;
+}
+
+/* מסדר את הפרופילים בשלוש עמודות */
+.profiles-grid { 
+    max-width: 1100px;
+    margin: auto;
+
+    /* מפעיל Grid */
+    display: grid;
+
+    /* שלוש עמודות שוות */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* רווח בין הכרטיסים */
+    gap: 16px;
+
+    /* רווח פנימי מהצדדים */
+    padding: 0 20px;
+}
+
+/* עיצוב כרטיס פרופיל */
+.profile-card { 
+    background: white;
+
+    /* מסגרת */
+    border: 1px solid #ddd;
+
+    /* פינות מעוגלות */
+    border-radius: 8px;
+
+    /* רווח פנימי */
+    padding: 16px;
+
+    /* ממרכז את התוכן */
+    text-align: center;
+}
+
+/* הופך את כרטיס הפרופיל ללחיץ */
+.profile-card-clickable { 
+    cursor: pointer; 
+}
+
+/* עיצוב תמונות הפרופיל */
+.profile-image, .profile-modal-image { 
+    width: 110px; 
+    height: 110px;
+
+    /* הופך לעיגול */
+    border-radius: 50%;
+
+    /* שומר על יחס התמונה */
+    object-fit: cover;
+}
+
+/* עיצוב טקסט בכרטיס */
+.profile-card p { 
+    margin: 5px 0; 
+    color: #666; 
+}
+
+/* מסדר את כפתורי הפעולה בשורה */
+.card-actions { 
+    display: flex;
+
+    /* ממרכז את הכפתורים */
+    justify-content: center;
+
+    /* רווח ביניהם */
+    gap: 10px;
+
+    /* רווח מלמעלה */
+    margin-top: 14px;
+}
+
+/* ממרכז הודעת אין תוצאות וטקסט עזר */
+.no-results, .profile-details-hint { 
+    text-align: center; 
+    color: #777; 
+}
+
+/* עיצוב פרטי הפרופיל המלאים */
+.profile-full-details { 
+    text-align: right; 
+
+    /* מרווח בין השורות */
+    line-height: 1.7; 
+}
+
+/* התאמה למסכים קטנים */
+@media (max-width: 700px) {
+
+    /* מציג את הפרופילים בעמודה אחת */
+    .profiles-grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    /* מעביר את הכותרת העליונה לטור */
+    .search-page header { 
+        flex-direction: column; 
+    }
+}

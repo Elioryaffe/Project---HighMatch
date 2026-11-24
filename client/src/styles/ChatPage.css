@@ -1,0 +1,229 @@
+/* גובה מינימלי של כל המסך ורווח פנימי */
+.chats-page-container { 
+    min-height: 100vh; 
+    padding: 20px; 
+}
+
+/* מגביל רוחב וממרכז את הכותרת ואת אזור הצ'אטים */
+.chats-top-header, .chats-layout { 
+    max-width: 1100px; 
+    margin: 0 auto 15px; 
+}
+
+/* מסדר את הכותרת העליונה בשורה */
+.chats-top-header {
+    display: flex;
+
+    /* מרחיק את האלמנטים לקצוות */
+    justify-content: space-between;
+
+    /* ממרכז אותם לגובה */
+    align-items: center;
+
+    /* רקע לבן */
+    background: white;
+
+    /* רווח פנימי */
+    padding: 15px 20px;
+
+    /* מסגרת אפורה */
+    border: 1px solid #ddd;
+}
+
+/* צבע לכותרת הראשית */
+.chats-top-header h2 { 
+    color: #b94762; 
+}
+
+/* עיצוב אזור הצ'אט כולו */
+.chats-layout { 
+    /* גובה יחסי למסך */
+    height: 72vh;
+
+    /* מסדר את הסרגל והצ'אט זה לצד זה */
+    display: flex;
+
+    /* רקע לבן */
+    background: white;
+
+    /* מסגרת אפורה */
+    border: 1px solid #ddd;
+
+    /* מסתיר תוכן שחורג מהאזור */
+    overflow: hidden;
+}
+
+/* עיצוב הסרגל של רשימת ה-Matches */
+.chats-sidebar { 
+    width: 290px;
+
+    /* קו מפריד */
+    border-left: 1px solid #ddd;
+
+    /* מאפשר גלילה אנכית */
+    overflow-y: auto;
+}
+
+/* עיצוב כותרות ופריטי רשימה */
+.sidebar-title, .match-item, .chat-header { 
+    padding: 14px; 
+    border-bottom: 1px solid #eee; 
+}
+
+/* מסדר פריטי Match וכותרת צ'אט בשורה */
+.match-item, .chat-header, .chat-user { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+/* הופך את פריט ה-Match ללחיץ */
+.match-item { 
+    cursor: pointer; 
+}
+
+/* רקע לפריט שנבחר */
+.match-item.active { 
+    background: #fbeef1; 
+}
+
+/* עיצוב תמונות המשתמשים */
+.match-avatar, .chat-header-avatar { 
+    width: 44px; 
+    height: 44px;
+
+    /* הופך את התמונה לעגולה */
+    border-radius: 50%;
+
+    /* שומר על יחס התמונה */
+    object-fit: cover;
+}
+
+/* מסיר מרווח ברירת מחדל מהטקסט */
+.match-info h4, .match-info p, .chat-header h3 { 
+    margin: 0; 
+}
+
+/* עיצוב טקסט משני */
+.match-info p, .no-matches-text { 
+    color: #777; 
+    font-size: 13px; 
+}
+
+/* אזור הצ'אט הראשי תופס את כל המקום שנשאר */
+.chat-main-area { 
+    flex: 1;
+
+    /* מסדר את הצ'אט בטור */
+    display: flex; 
+    flex-direction: column; 
+}
+
+/* אזור רשימת ההודעות */
+.messages-list { 
+    /* תופס את המקום הפנוי */
+    flex: 1;
+
+    /* מאפשר גלילה אנכית */
+    overflow-y: auto;
+
+    /* רווח פנימי */
+    padding: 18px;
+
+    /* רקע אפור בהיר */
+    background: #fafafa;
+}
+
+/* עוטף כל הודעה בשורה */
+.message-wrapper { 
+    display: flex; 
+    margin-bottom: 10px; 
+}
+
+/* מיישר את ההודעות שלי לצד אחד */
+.my-message-wrapper { 
+    justify-content: flex-start; 
+}
+
+/* מיישר את ההודעות של הצד השני לצד השני */
+.other-message-wrapper { 
+    justify-content: flex-end; 
+}
+
+/* עיצוב בועת הודעה */
+.message { 
+    /* מגביל את רוחב ההודעה */
+    max-width: 70%;
+
+    /* רווח פנימי */
+    padding: 9px 12px;
+
+    /* מסגרת */
+    border: 1px solid #ddd;
+
+    /* פינות מעוגלות */
+    border-radius: 7px;
+
+    /* רקע לבן */
+    background: white;
+}
+
+/* צבע רקע מיוחד להודעות שלי */
+.my-message { 
+    background: #fbeef1; 
+}
+
+/* מסדר את שורת כתיבת ההודעה */
+.chat-input-form { 
+    display: flex;
+
+    /* רווח בין השדה לכפתור */
+    gap: 10px;
+
+    /* רווח פנימי */
+    padding: 14px;
+
+    /* קו מפריד מלמעלה */
+    border-top: 1px solid #ddd;
+}
+
+/* שדה ההודעה תופס את כל המקום שנשאר */
+.chat-input-form input { 
+    flex: 1; 
+}
+
+/* עיצוב מצב שבו עדיין לא נבחר צ'אט */
+.no-chat-selected { 
+    flex: 1;
+
+    /* ממרכז את התוכן */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+
+    /* ממרכז את הטקסט */
+    text-align: center;
+
+    /* צבע אפור */
+    color: #666;
+}
+
+/* התאמה למסכים קטנים */
+@media (max-width: 750px) {
+
+    /* במסך קטן מעביר את הסרגל והצ'אט אחד מתחת לשני */
+    .chats-layout { 
+        height: auto; 
+        flex-direction: column; 
+    }
+
+    /* הסרגל תופס את כל הרוחב */
+    .chats-sidebar { 
+        width: 100%; 
+    }
+}
+
+/* textarea בחלון קופץ תופס את כל הרוחב */
+.modal-content textarea { 
+    width: 100%; 
+}

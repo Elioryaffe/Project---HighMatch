@@ -1,0 +1,67 @@
+/* גובה מינימלי של כל המסך ורווח פנימי */
+.about-page { 
+    min-height: 100vh; 
+    padding: 25px; 
+}
+
+/* מגביל רוחב, ממרכז, מוסיף רקע ומסגרת */
+.about-header, .about-content { 
+    max-width: 900px; 
+    
+    /* ממרכז ונותן רווח למטה */
+    margin: 0 auto 20px; 
+    
+    /* רקע לבן */
+    background: white; 
+    
+    /* מסגרת אפורה */
+    border: 1px solid #ddd; 
+    
+    /* רווח פנימי */
+    padding: 20px; 
+}
+
+/* מסדר את הכותרת והכפתור בשורה */
+.about-header { 
+    display: flex; 
+    
+    /* מרחיק את האלמנטים לקצוות */
+    justify-content: space-between; 
+    
+    /* ממרכז אותם לגובה */
+    align-items: center; 
+}
+
+/* צבע ורוד לכותרות */
+.about-header h2, .about-section h3 { 
+    color: #b94762; 
+}
+
+/* רווח מתחת לכל אזור */
+.about-section { 
+    margin-bottom: 25px; 
+}
+
+/* עיצוב הטקסט והרשימות */
+.about-section p, .about-section li { 
+    /* צבע אפור לטקסט */
+    color: #555; 
+    
+    /* מרווח בין השורות */
+    line-height: 1.7; 
+}
+
+/* עיצוב החלק התחתון של הדף */
+.about-footer { 
+    /* ממרכז את הטקסט */
+    text-align: center; 
+    
+    /* קו מעל ה-footer */
+    border-top: 1px solid #ddd; 
+    
+    /* רווח פנימי מלמעלה */
+    padding-top: 15px; 
+    
+    /* צבע אפור בהיר */
+    color: #777; 
+}

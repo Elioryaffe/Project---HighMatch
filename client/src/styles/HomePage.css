@@ -1,0 +1,192 @@
+/* מסדר את סרגל הניווט בשורה */
+.navbar {
+    display: flex;
+
+    /* ממרכז את הפריטים לגובה */
+    align-items: center;
+
+    /* מרחיק את הפריטים לקצוות */
+    justify-content: space-between;
+
+    /* רווח בין הפריטים */
+    gap: 15px;
+
+    /* רווח פנימי */
+    padding: 15px 5%;
+
+    /* רקע לבן */
+    background: white;
+
+    /* קו תחתון אפור */
+    border-bottom: 1px solid #ddd;
+}
+
+/* עיצוב שם המותג */
+.nav-brand {
+    color: #b94762;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* מסדר את קישורי הניווט בשורה */
+.nav-links, .nav-user-logged, .nav-guest-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* עיצוב כפתורי הרשמה ומשתמש מחובר */
+.nav-register-btn, .nav-user-logged button {
+    background: #b94762;
+    color: white;
+    border: none;
+}
+
+/* עיצוב האזור הראשי של דף הבית */
+.dashboard-container, .landing-container {
+    /* מגביל רוחב */
+    max-width: 1100px;
+
+    /* גובה מינימלי */
+    min-height: 72vh;
+
+    /* ממרכז ונותן רווח מלמעלה ולמטה */
+    margin: 28px auto;
+
+    /* רווח פנימי */
+    padding: 35px 45px;
+
+    /* רקע בהיר */
+    background: #fffafb;
+
+    /* פס ורוד מימין */
+    border-right: 7px solid #b94762;
+
+    /* פס ורוד משמאל */
+    border-left: 7px solid #b94762;
+
+    /* פינות מעוגלות */
+    border-radius: 10px;
+}
+
+/* מסדר את אזור הדשבורד בטור */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+
+    /* ממרכז את התוכן לגובה */
+    justify-content: center;
+}
+
+/* ממרכז את אזור הכותרת */
+.dashboard-hero, .landing-hero {
+    text-align: center;
+
+    /* רווח למטה */
+    margin-bottom: 28px;
+}
+
+/* עיצוב אזור הכותרת בדשבורד */
+.dashboard-hero {
+    background: #f7e8ec;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* צבע לכותרות */
+.dashboard-hero h2, .dash-card h3 {
+    color: #a63d56;
+}
+
+/* צבע לטקסטים */
+.dashboard-hero p, .landing-hero p, .dash-card p {
+    color: #666;
+}
+
+/* מסדר את הכרטיסים בשתי עמודות */
+.dashboard-cards-grid {
+    display: grid;
+
+    /* שתי עמודות שוות */
+    grid-template-columns: 1fr 1fr;
+
+    /* רווח בין הכרטיסים */
+    gap: 18px;
+}
+
+/* עיצוב כל כרטיס בדשבורד */
+.dash-card {
+    /* גובה מינימלי */
+    min-height: 135px;
+
+    /* רקע לבן */
+    background: white;
+
+    /* מסגרת אפורה */
+    border: 1px solid #ddd;
+
+    /* פינות מעוגלות */
+    border-radius: 8px;
+
+    /* רווח פנימי */
+    padding: 25px;
+
+    /* צבע הטקסט */
+    color: #222;
+
+    /* צל עדין */
+    box-shadow: 0 2px 6px #e5e5e5;
+}
+
+/* מסדר את כפתורי הכניסה וההרשמה בשורה */
+.landing-actions {
+    display: flex;
+
+    /* ממרכז את הכפתורים */
+    justify-content: center;
+
+    /* רווח בין הכפתורים */
+    gap: 10px;
+
+    /* רווח מלמעלה */
+    margin-top: 20px;
+}
+
+/* עיצוב בסיסי לשני הכפתורים הגדולים */
+.btn-primary-large, .btn-secondary-large {
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+/* עיצוב הכפתור הראשי */
+.btn-primary-large {
+    background: #b94762;
+    color: white;
+}
+
+/* עיצוב הכפתור המשני */
+.btn-secondary-large {
+    background: white;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+/* התאמה למסכים קטנים */
+@media (max-width: 800px) {
+
+    /* מעביר את ה-navbar לטור */
+    .navbar {
+        flex-direction: column;
+    }
+
+    /* מקטין רווחים במסך קטן */
+    .dashboard-container, .landing-container {
+        margin: 15px;
+        padding: 25px 18px;
+    }
+
+    /* מעביר את הכרטיסים לעמודה אחת */
+    .dashboard-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

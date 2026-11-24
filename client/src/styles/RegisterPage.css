@@ -1,0 +1,147 @@
+/* עוטף את כל דף ההרשמה וממרכז את הטופס */
+.register-page-wrapper {
+    /* גובה מינימלי של כל המסך */
+    min-height: 100vh;
+
+    /* מפעיל Flexbox */
+    display: flex;
+
+    /* ממרכז לגובה */
+    align-items: center;
+
+    /* ממרכז לרוחב */
+    justify-content: center;
+
+    /* רווח פנימי מסביב */
+    padding: 25px;
+}
+
+/* עיצוב קופסת טופס ההרשמה */
+.register-form-container {
+    /* תופס את כל הרוחב האפשרי */
+    width: 100%;
+
+    /* מגביל את הרוחב המקסימלי */
+    max-width: 850px;
+
+    /* רקע לבן */
+    background: white;
+
+    /* רווח פנימי */
+    padding: 30px;
+
+    /* מסגרת אפורה */
+    border: 1px solid #ddd;
+
+    /* פינות מעוגלות */
+    border-radius: 8px;
+}
+
+/* ממרכז את הלוגו והטקסטים */
+.register-logo, .register-form-container h1, .register-subtitle, .login-prompt, .divider {
+    text-align: center;
+}
+
+/* צבע ורוד ללוגו */
+.register-logo {
+    color: #b94762;
+}
+
+/* צבע אפור לטקסט המשני */
+.register-subtitle {
+    color: #666;
+}
+
+/* מסדר את שדות הטופס בשתי עמודות */
+.form-grid {
+    display: grid;
+
+    /* שתי עמודות שוות */
+    grid-template-columns: 1fr 1fr;
+
+    /* רווח בין השדות */
+    gap: 14px;
+}
+
+/* רווח מלמעלה לשדה שתופס רוחב מלא */
+.input-group.full-width {
+    margin-top: 15px;
+}
+
+/* כפתורי הרשמה והתחברות חיצונית תופסים את כל הרוחב */
+.register-submit-btn, .social-btn {
+    width: 100%;
+
+    /* רווח מלמעלה */
+    margin-top: 12px;
+}
+
+/* רקע לבן לכפתור החברתי */
+.social-btn {
+    background: white;
+}
+
+/* רווח מעל ומתחת למפריד ולקישור להתחברות */
+.divider, .login-prompt {
+    margin: 15px 0;
+}
+
+/* התאמה למסכים קטנים */
+@media (max-width: 700px) {
+
+    /* במסך קטן מציג את השדות בעמודה אחת */
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* עין להצגת סיסמה - שומר על העיצוב של השדה הרגיל */
+.password-field-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* השארת מקום לעין בצד שמאל של שדה הסיסמה */
+.password-field-wrapper input {
+    width: 100%;
+    padding-left: 45px;
+    box-sizing: border-box;
+}
+
+/* כפתור העין, בלי רקע ובלי מסגרת */
+.password-toggle-btn {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    padding: 5px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #666;
+}
+
+/* צורת העין והפס שמופיע כשהסיסמה גלויה */
+.password-toggle-btn svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.password-toggle-btn:hover {
+    color: #333;
+}
+
+.password-toggle-btn:focus-visible {
+    outline: 2px solid #666;
+    outline-offset: 2px;
+}

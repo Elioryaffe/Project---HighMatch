@@ -1,0 +1,184 @@
+/* גובה מינימלי של כל המסך */
+.admin-page-container { 
+    min-height: 100vh; 
+    
+    /* רווח פנימי מסביב לתוכן */
+    padding: 25px; 
+}
+
+/* מגביל רוחב וממרכז את הכותרת והתוכן */
+.admin-header, .admin-content { 
+    max-width: 1100px; 
+    
+    /* ממרכז ונותן רווח למטה */
+    margin: 0 auto 20px; 
+}
+
+.admin-header {
+    /* מסדר את האלמנטים בשורה */
+    display: flex;
+    
+    /* מרחיק את האלמנטים לקצוות */
+    justify-content: space-between;
+    
+    /* ממרכז אותם לגובה */
+    align-items: center;
+    
+    /* רקע לבן */
+    background: white;
+    
+    /* רווח פנימי */
+    padding: 15px 20px;
+    
+    /* מסגרת אפורה דקה */
+    border: 1px solid #ddd;
+}
+
+/* צבע לכותרת ולמספרים המודגשים */
+.admin-header h2, .highlight-num { 
+    color: #b94762; 
+}
+
+/* עיצוב כרטיסי הסטטיסטיקה והטבלאות */
+.admin-stats-card, .admin-table-wrapper { 
+    /* רקע לבן */
+    background: white;
+    
+    /* מסגרת אפורה */
+    border: 1px solid #ddd;
+    
+    /* רווח פנימי */
+    padding: 18px;
+    
+    /* רווח מתחת לאלמנט */
+    margin-bottom: 18px;
+}
+
+/* מאפשר גלילה לצדדים אם הטבלה רחבה */
+.admin-table-wrapper { 
+    overflow-x: auto; 
+}
+
+/* רווח קטן בכותרות h3 */
+.admin-content h3 { 
+    padding: 0 5px; 
+}
+
+/* הטבלה תופסת את כל הרוחב */
+.admin-users-table { 
+    width: 100%;
+    
+    /* מאחד את קווי הטבלה */
+    border-collapse: collapse;
+}
+
+/* עיצוב תאי הטבלה והכותרות */
+.admin-users-table th, .admin-users-table td { 
+    /* רווח פנימי בתאים */
+    padding: 11px;
+    
+    /* קו מתחת לכל תא */
+    border-bottom: 1px solid #eee;
+    
+    /* יישור טקסט לימין */
+    text-align: right;
+}
+
+/* גודל תמונת המשתמש */
+.admin-user-avatar { 
+    width: 42px;
+    height: 42px;
+    
+    /* הופך את התמונה לעגולה */
+    border-radius: 50%;
+    
+    /* שומר על יחס התמונה בלי לעוות */
+    object-fit: cover;
+}
+
+/* רווח בין כפתורים בטבלה */
+.admin-users-table button { 
+    margin-left: 8px; 
+}
+
+/* הופך טקסט למודגש */
+.fw-bold { 
+    font-weight: bold; 
+}
+
+/* עיצוב כפתור מחיקה */
+.delete-user-btn { 
+    /* צבע טקסט אדום */
+    color: #a40000;
+    
+    /* רקע לבן */
+    background: white;
+}
+
+/* עיצוב הודעת טעינה */
+.admin-loading { 
+    /* ממרכז את הטקסט */
+    text-align: center;
+    
+    /* רווח מלמעלה */
+    margin-top: 80px;
+}
+
+/* כפתורים נפרדים לטיפול בדיווח או למחיקת המשתמש המדווח */
+.report-actions-cell {
+    white-space: nowrap;
+}
+
+.delete-report-btn {
+    color: #176b38;
+    background: white;
+    border: 1px solid #176b38;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-report-btn:hover {
+    background: #eaf6ee;
+}
+
+.report-actions-cell .delete-user-btn {
+    border: 1px solid #a40000;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* שורת חיפוש משתמשים בתוך ממשק המנהל */
+.admin-user-search {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    max-width: 420px;
+    margin: 0 5px 16px;
+}
+
+.admin-user-search label {
+    font-weight: 600;
+}
+
+.admin-user-search input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+    outline: none;
+}
+
+.admin-user-search input:focus {
+    border-color: #b94762;
+    box-shadow: 0 0 0 2px rgba(185, 71, 98, 0.12);
+}
+
+.admin-user-search-empty {
+    text-align: center !important;
+    color: #777;
+    padding: 22px !important;
+}

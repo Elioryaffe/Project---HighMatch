@@ -1,0 +1,127 @@
+/* גובה מינימלי של כל המסך ורווח פנימי */
+.profile-page-wrapper { 
+    min-height: 100vh; 
+    padding: 25px; 
+}
+
+/* מגביל רוחב וממרכז את הכותרת ואת התוכן */
+.profile-top-header, .profile-content { 
+    max-width: 900px; 
+    margin: 0 auto 18px; 
+}
+
+/* מסדר את הכותרת העליונה בשורה */
+.profile-top-header {
+    display: flex;
+
+    /* מרחיק את האלמנטים לקצוות */
+    justify-content: space-between;
+
+    /* ממרכז אותם לגובה */
+    align-items: center;
+
+    /* רקע לבן */
+    background: white;
+
+    /* רווח פנימי */
+    padding: 15px 20px;
+
+    /* מסגרת אפורה */
+    border: 1px solid #ddd;
+}
+
+/* צבע ורוד לכותרת */
+.profile-top-header h2 { 
+    color: #b94762; 
+}
+
+/* עיצוב הכרטיס הראשי של הפרופיל */
+.profile-card-main { 
+    background: white; 
+    border: 1px solid #ddd; 
+    padding-bottom: 22px; 
+}
+
+/* עיצוב אזור הכיסוי העליון */
+.profile-cover-photo { 
+    height: 95px; 
+    background: #b94762; 
+}
+
+/* ממרכז את התמונה, הכותרת והפעולות */
+.profile-avatar-container, .profile-details-header, .profile-actions { 
+    text-align: center; 
+}
+
+/* מעלה את תמונת הפרופיל מעל אזור הכיסוי */
+.profile-avatar-container { 
+    margin-top: -42px; 
+}
+
+/* עיצוב תמונת הפרופיל הגדולה */
+.profile-avatar-large { 
+    width: 105px; 
+    height: 105px;
+
+    /* הופך את התמונה לעגולה */
+    border-radius: 50%;
+
+    /* שומר על יחס התמונה */
+    object-fit: cover;
+
+    /* מסגרת לבנה מסביב לתמונה */
+    border: 4px solid white;
+}
+
+/* צבע אפור לטקסט משני ולכותרות שדות */
+.profile-subtitle, .info-box label { 
+    color: #777; 
+}
+
+/* מסדר את פרטי הפרופיל בשתי עמודות */
+.profile-info-grid {
+    display: grid;
+
+    /* שתי עמודות שוות */
+    grid-template-columns: 1fr 1fr;
+
+    /* רווח בין התאים */
+    gap: 10px;
+
+    /* רווח פנימי */
+    padding: 22px;
+}
+
+/* עיצוב כל תיבת מידע */
+.info-box { 
+    display: flex;
+
+    /* מסדר את התוכן בטור */
+    flex-direction: column;
+
+    /* רווח פנימי */
+    padding: 11px;
+
+    /* מסגרת אפורה בהירה */
+    border: 1px solid #eee;
+}
+
+/* רווח פנימי לאזורי הטקסט */
+.profile-text-section { 
+    padding: 0 22px 18px; 
+}
+
+/* עיצוב הודעות טעינה ושגיאה */
+.profile-loading, .profile-error { 
+    text-align: center; 
+    margin-top: 70px; 
+}
+
+/* התאמה למסכים קטנים */
+@media (max-width: 650px) {
+
+    /* במסך קטן מציג את הפרטים בעמודה אחת */
+    .profile-info-grid { 
+        grid-template-columns: 1fr; 
+    }
+}
